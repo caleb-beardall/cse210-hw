@@ -33,15 +33,6 @@ class Program
             letter = "A";
         }
 
-        if (gradePercentage >= 70)
-        {
-            Console.WriteLine("You passed the class!");
-        }
-        else
-        {
-            Console.WriteLine("You didn't pass the class. Better luck next time!");
-        }
-
         string letterSign = "";
 
         if (gradePercentage >= 93 || gradePercentage < 60)
@@ -67,5 +58,14 @@ class Program
         }
 
         Console.WriteLine($"Your grade is: {letter}{letterSign}");
+
+        if (gradePercentage >= 70)
+        {
+            Console.WriteLine("You passed the class!");
+        }
+        else
+        {
+            Console.WriteLine("You didn't pass the class. Better luck next time!");
+        }
     }
 }

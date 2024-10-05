@@ -1,9 +1,27 @@
+using System.Runtime.CompilerServices;
+using Microsoft.VisualBasic;
+
 public class PromptGenerator
 {
-    public List<string> _prompts;
+    private List<string> _prompts;
+
+    public PromptGenerator()
+    {
+        _prompts = new List<string>();
+    }
+
+    public void AddPrompt(string prompt)
+    {
+        _prompts.Add(prompt);
+    }
 
     public string GetRandomPrompt()
     {
-        return "";
+        Random random = new Random();
+        int index = random.Next(_prompts.Count);
+        string randomPrompt = _prompts[index];
+        
+        return randomPrompt;
     }
+
 }

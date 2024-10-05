@@ -109,7 +109,7 @@ class Program
             //4. Load
             else if (userNumber == 4)
             {
-                Journal journal2 = new Journal();
+                journal1 = new Journal();
                 
                 string loadFile;
 
@@ -125,12 +125,12 @@ class Program
                 //using AddEntry from Journal
                 foreach (Entry i in newEntries)
                 {
-                    journal2.AddEntry(i);
+                    journal1.AddEntry(i);
                 }
 
                 //Display the updated Journal's results
                 //using DisplayAll from Journal
-                journal2.DisplayAll();
+                journal1.DisplayAll();
 
                 Console.WriteLine();
             }

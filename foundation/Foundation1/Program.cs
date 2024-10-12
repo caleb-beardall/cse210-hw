@@ -38,9 +38,9 @@ class Program
 
         //Video 4
         Comment comment11 = new Comment("Alina Small", "Comment example 11.");
-        Comment comment12 = new Comment("Rudy Walters", "Comment xample 12.");
-        Comment comment13 = new Comment("Samara Cuevas", "Comment xample 13.");
-        Comment comment14 = new Comment("Brecken Fowler", "Comment xample 14.");
+        Comment comment12 = new Comment("Rudy Walters", "Comment example 12.");
+        Comment comment13 = new Comment("Samara Cuevas", "Comment example 13.");
+        Comment comment14 = new Comment("Brecken Fowler", "Comment example 14.");
         
         List<Comment> listComments4 = [comment11, comment12, comment13, comment14];
         

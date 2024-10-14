@@ -15,8 +15,5 @@ public class Comment
     {
         Console.WriteLine($"{_commenter} said: \"{_text}\"");
     }
-
-
-
 }
     

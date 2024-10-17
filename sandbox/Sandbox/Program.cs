@@ -4,6 +4,13 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World!");
+        string input = "This is an example string to split.";
+
+        string[] words = input.Split(' ');
+
+        foreach (var word in words)
+        {
+            Console.WriteLine(word);
+        }
     }
 }

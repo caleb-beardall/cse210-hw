@@ -1,4 +1,5 @@
 using System;
+using System.Data;
 
 public class Reference
 {
@@ -12,6 +13,7 @@ public class Reference
         _book = book;
         _chapter = chapter;
         _verse = verse;
+        _endVerse = 0;
     }
 
     public Reference(string book, int chapter, int startVerse, int endVerse)
@@ -21,5 +23,20 @@ public class Reference
         _verse = startVerse;
         _endVerse = endVerse;
     }
-    
+
+    public string GetDisplayText()
+    {
+        string scriptureRef;
+        
+        if (_endVerse == 0)
+        {
+            scriptureRef = $"{_book} {_chapter}:{_verse}";
+        }
+        else
+        {
+            scriptureRef = $"{_book} {_chapter}:{_verse}-{_endVerse}";
+        }
+
+        return scriptureRef;
+    }
 }

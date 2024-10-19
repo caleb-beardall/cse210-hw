@@ -19,6 +19,8 @@ class Program
             Console.WriteLine();
             Console.WriteLine("Press enter to continue or type 'quit' to finish: ");
             userInput = Console.ReadLine();
+
+            Console.Clear();
             
             Random random = new Random();
 

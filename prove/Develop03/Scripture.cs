@@ -32,46 +32,48 @@ public class Scripture
     public void HideRandomWords(int numberToHide)
     {
         int hiddenWordCount = 0;
-        
-        foreach (Word i in _words)
-        {
-            if (i.IsHidden() == true)
-            {
-                hiddenWordCount += 1;
-            }
-        }
-        
 
-        if (hiddenWordCount >= numberToHide)
+        if (numberToHide >= _words.Count())
         {
             foreach (Word i in _words)
             {
                 i.Hide();
             }
         }
-        else if (hiddenWordCount < numberToHide)
+
+        else
         {
-            int remainingNumberToHide = numberToHide - hiddenWordCount;
-
-            for (int i = 0; i < remainingNumberToHide; i++)
+            foreach (Word i in _words)
             {
-
-                bool complete = false;
-                
-                do
+                if (i.IsHidden() == true)
                 {
-                    Random random = new Random();
+                    hiddenWordCount += 1;
+                }
+            }
 
-                    int randomNumber = random.Next(0, _words.Count() - 1);
+            if (hiddenWordCount < numberToHide)
+            {
+                int remainingNumberToHide = numberToHide - hiddenWordCount;
 
-                    if (_words[randomNumber].IsHidden() == false)
+                for (int i = 0; i < remainingNumberToHide; i++)
+                {
+                    bool complete = false;
+                    
+                    do
                     {
-                        _words[randomNumber].Hide();
+                        Random random = new Random();
 
-                        complete = true;
-                    }   
+                        int randomNumber = random.Next(0, _words.Count());
 
-                } while (complete == false);
+                        if (_words[randomNumber].IsHidden() == false)
+                        {
+                            _words[randomNumber].Hide();
+
+                            complete = true;
+                        }
+
+                    } while (complete == false);
+                }
             }
         }
     }
@@ -110,6 +112,7 @@ public class Scripture
         {
             isCompletelyHidden = false;
         }
+        
         else
         {
             isCompletelyHidden = true;

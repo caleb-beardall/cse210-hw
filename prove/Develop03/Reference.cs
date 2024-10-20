@@ -32,6 +32,7 @@ public class Reference
         {
             scriptureRef = $"{_book} {_chapter}:{_verse}";
         }
+        
         else
         {
             scriptureRef = $"{_book} {_chapter}:{_verse}-{_endVerse}";

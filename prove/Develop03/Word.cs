@@ -30,6 +30,7 @@ public class Word
         {
             isHidden = true;
         }
+
         else
         {
             isHidden = false;
@@ -46,6 +47,7 @@ public class Word
         {
             text = _text;
         }
+        
         else
         {
             string underscoreString = new string('_', _text.Length);

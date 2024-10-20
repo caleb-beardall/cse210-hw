@@ -4,7 +4,7 @@ using System.Reflection.Metadata;
 /*
 To exceed this program’s requirements, I wrote the program so that 1) a hidden word will
 remain hidden once it has been hidden, and 2) the number of words hidden by the program
-varies (between 5 and 10) each time words are hidden.
+varies between 5 to 10 words each time words are hidden.
 */
 class Program
 {
@@ -23,7 +23,7 @@ class Program
 
             Console.WriteLine($"{reference1.GetDisplayText()} {scripture1.GetDisplayText()}");
             Console.WriteLine();
-            
+
             Console.WriteLine("Press enter to continue or type 'quit' to finish: ");
             userInput = Console.ReadLine();
 

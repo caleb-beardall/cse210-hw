@@ -40,8 +40,16 @@ public class Scripture
                 hiddenWordCount += 1;
             }
         }
+        
 
-        if (hiddenWordCount < numberToHide)
+        if (hiddenWordCount >= numberToHide)
+        {
+            foreach (Word i in _words)
+            {
+                i.Hide();
+            }
+        }
+        else if (hiddenWordCount < numberToHide)
         {
             int remainingNumberToHide = numberToHide - hiddenWordCount;
 
@@ -54,7 +62,7 @@ public class Scripture
                 {
                     Random random = new Random();
 
-                    int randomNumber = random.Next(0, _words.Count());
+                    int randomNumber = random.Next(0, _words.Count() - 1);
 
                     if (_words[randomNumber].IsHidden() == false)
                     {
@@ -63,7 +71,7 @@ public class Scripture
                         complete = true;
                     }   
 
-                } while (!(complete == false));
+                } while (complete == false);
             }
         }
     }

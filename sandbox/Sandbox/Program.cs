@@ -1,16 +1,39 @@
 using System;
+using System.Globalization;
+using System.Runtime.InteropServices;
 
 class Program
 {
     static void Main(string[] args)
     {
-        string input = "This is an example string to split.";
+        int numberOfQuestions = 25;
 
-        string[] words = input.Split(' ');
+        int rounds = 3;
 
-        foreach (var word in words)
+        for (int i = rounds; i > 0; i--)
         {
-            Console.WriteLine(word);
+            if (i > 1)
+            {
+                shuffle._questions
+
+                foreach (question in _questions)
+                {
+                    numberOfQuestions.add(numberOfQuestions)
+                }
+            }
+            else
+            {
+                numberOfQuestions % 9
+
+
+            }
+
+            }
         }
+
+        List<string> questions = new List<string>{};
+
+        for (int )
+
     }
 }

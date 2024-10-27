@@ -6,7 +6,6 @@ public abstract class Activity
     protected string _description;
     protected int _duration;
 
-    
     public void DisplayStartMessage()
     {    
         Console.WriteLine($"Welcome to the {_name} Activity.");

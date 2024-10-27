@@ -14,6 +14,7 @@ public class ReflectingActivity : Activity
         _prompts = prompts;
         _questions = questions;
     }
+    
     public override void Run()
     {
         Console.WriteLine("\nConsider the following prompt:");

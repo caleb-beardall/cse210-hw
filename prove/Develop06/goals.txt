@@ -1,0 +1,4 @@
+90,4
+SimpleGoal,Simple Goal,A simple goal.,10,True
+EternalGoal,Eternal Goal,An eternal goal.,20
+ChecklistGoal,Checklist Goal,A checklist goal.,30,False,3,100
